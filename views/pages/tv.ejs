@@ -1,0 +1,192 @@
+<%- include ("../partials/header") %> <%- include ("../partials/loading") %> <%-
+include ("../partials/navbar") %>
+
+<!-- Breadcrumb Begin -->
+<div class="breadcrumb-option">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="breadcrumb__links">
+          <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+          <span>TV Series</span>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="product__pagination p-0 float-right" >
+       
+           <a href="/tv/<%= page - 1 %>"  class="fa fa-angle-double-left" id="Page"></a>
+            <a href="" class="current-page"><%= page %></a>
+            <a href="/tv/<%= page + 1 %>"><i class="fa fa-angle-double-right" id="nextPage"></i></a>
+        
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Breadcrumb End -->
+
+<!-- Product Section Begin -->
+<section class="product-page spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="product__page__content">
+          <div class="product__page__title">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-6">
+                <div class="section-title">
+                  <h4>Trending TV Series</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="row">
+            <% for (let i =0; i <trendingTV.length; i++) {  %>
+                <a href="/tv/details/<%= trendingTV[i]%>">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="product__item">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="<%= trendingTVImage[i] %>"
+                >
+                  <div class="ep"><%= trendingTVVoteAverage[i] %></div>
+                </div>
+                <div class="product__item__text">
+                  <ul>
+                    <% for (let j =0; j <trendingTVGenre[i].length; j++) {  %>
+                    <li><%= trendingTVGenre[i][j] %></li><% } %>
+                  
+                  </ul>
+                  <h5><a href="/tv/details/<%= trendingTV[i]%>"><%= trendingTVTitle[i] %></a></h5>
+                </div>
+              </div>
+            </div></a><% } %>
+         
+             
+          </div>
+          <div class="product__page__title">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-6">
+                <div class="section-title">
+                  <h4>Top Rated TV Series</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% for (let i =0; i <topRatedTV.length; i++) {  %>
+                <a href="/tv/details/<%= topRatedTV[i]%>">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="product__item">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="<%= topRatedTVImage[i] %>"
+                >
+                  <div class="ep"><%= topRatedTVVoteAverage[i] %></div>
+                </div>
+                <div class="product__item__text">
+                  <ul>
+                    <% for (let j =0; j <topRatedTVGenre[i].length; j++) {  %>
+                    <li><%= topRatedTVGenre[i][j] %></li><% } %>
+                  
+                  </ul>
+                  <h5><a href="/tv/details/<%= topRatedTV[i]%>"><%= topRatedTVTitle[i] %></a></h5>
+                </div>
+              </div>
+            </div></a><% } %>
+          </div>
+
+          <div class="product__page__title">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-6">
+                <div class="section-title">
+                  <h4>Popular TV Serires</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% for (let i =0; i <popularTV.length; i++) {  %>
+                <a href="/tv/details/<%= popularTV[i]%>">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="product__item">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="<%= popularTVImage[i] %>"
+                >
+                  <div class="ep"><%= popularTVVoteAverage[i] %></div>
+                </div>
+                <div class="product__item__text">
+                  <ul>
+                    <% for (let j =0; j <popularTVGenre[i].length; j++) {  %>
+                    <li><%= popularTVGenre[i][j] %></li><% } %>
+                  
+                  </ul>
+                  <h5><a href="/tv/details/<%= popularTV[i]%>"><%= popularTVTitle[i] %></a></h5>
+                </div>
+              </div>
+            </div></a><% } %>
+          </div>
+
+          <div class="product__page__title">
+            <div class="row">
+              <div class="col-lg-8 col-md-8 col-sm-6">
+                <div class="section-title">
+                  <h4>"On The Air" TV Series</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% for (let i =0; i <onTheAirTV.length; i++) {  %>
+                <a href="/tv/details/<%= onTheAirTV[i]%>">
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="product__item">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="<%= onTheAirTVImage[i] %>"
+                >
+                  <div class="ep"><%= onTheAirTVVoteAverage[i] %></div>
+                </div>
+                <div class="product__item__text">
+                  <ul>
+                    <% for (let j =0; j <onTheAirTVGenre[i].length; j++) {  %>
+                    <li><%= onTheAirTVGenre[i][j] %></li><% } %>
+                  
+                  </ul>
+                  <h5><a href="/tv/details/<%= onTheAirTV[i]%>"><%= onTheAirTVTitle[i] %></a></h5>
+                </div>
+              </div>
+            </div></a><% } %>
+          </div>
+
+        </div>
+     
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="product__sidebar">
+          <div class="product__sidebar__view">
+            <div class="section-title">
+              <h5>Now Airing</h5>
+            </div>
+            <div class="filter__gallery">
+                <% for (let i =0; i <airingTodayTV.length; i++) {  %>
+              <div
+                class="product__sidebar__view__item set-bg mix day years"
+                data-setbg="<%= airingTodayTVImage[i] %>"
+              >
+               
+                <h5><a href=" tv/details/<%=airingTodayTV[i] %>"><%= airingTodayTVTitle[i] %></a></h5>
+              </div><% } %>
+          
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product Section End -->
+<%- include ("../partials/footer") %>

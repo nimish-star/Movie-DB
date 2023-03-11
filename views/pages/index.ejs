@@ -1,0 +1,168 @@
+<%- include ("../partials/header") %> <%- include ("../partials/loading") %> <%-
+include ("../partials/navbar") %>
+
+<!-- Hero Section Begin -->
+<section class="hero">
+
+  <div class="container">
+    <div class="hero__slider owl-carousel">
+      <% for (let i =0; i <trendingMovie.length; i++) { %>
+      <div class="hero__items set-bg" data-setbg="<%= trendingMovieImage[i] %>">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="hero__text">
+              <% for (let j =0; j <trendingMovieGenre[i].length; j++) { %>
+              <div class="label"> <%= trendingMovieGenre[i][j] %></div><% } %>
+              <h2> <%= trendingMovieTitle[i] %></h2>
+              <p><%= trendingMovieOverview[i] %></p>
+              <a href="/movie/details/<%= trendingMovie[i] %>"
+                ><span>Get Details</span> <i class="fa fa-angle-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div><% } %>
+    
+    </div>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Product Section Begin -->
+<section class="product spad">
+  <div class="container">
+    
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="trending__product">
+          <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="section-title">
+                <h4>Popular Movies</h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="btn__all">
+                <a href="#" class="primary-btn"
+                  >View All <span class="arrow_right"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% for (let i =0; i <popularMovie.length; i++) {  %>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              
+              <div class="product__item">
+                <a href="/movie/details/<%= popularMovie[i] %>">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="<%= popularMovieImage[i] %>"
+                >
+                  <div class="ep"><%= popularMovieVoteAverage[i] %></div>
+                </div></a>
+                <div class="product__item__text">
+                  <ul>
+                    <% for (let j =0; j <popularMovieGenre[i].length; j++) { %>
+                    <li><%= popularMovieGenre[i][j] %></li><% } %>
+               
+                  </ul>
+                  <h5>
+                    <a href="/movie/details/<%= popularMovie[i] %>"><%= popularMovieTitle[i] %></a>
+                  </h5>
+                </div>
+              </div>
+            </div><% } %>
+       </div>
+        </div>
+        <div class="popular__product">
+          <div class="row">
+           
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="section-title">
+                <h4>Popular TV Series</h4>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4">
+              <div class="btn__all">
+                <a href="#" class="primary-btn"
+                  >View All <span class="arrow_right"></span
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% for (let i =0; i <popularTV.length; i++) {  %>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="product__item">
+                <a href="/tv/details/<%= popularTV[i] %>">
+                <div
+                  class="product__item__pic set-bg"
+                  data-setbg="<%= popularTVImage[i] %>"
+                >
+                  <div class="ep"><%= popularTVVoteAverage[i] %></div>
+           
+                </div></a>
+                <div class="product__item__text">
+                  <ul>
+                    <% for (let j =0; j <popularTVGenre[i].length; j++) { %>
+                    <li><%= popularTVGenre[i][j] %></li><% } %>
+                
+                  </ul>
+                  <h5><a href="/tv/details/<%=popularTV[i] %>"><%= popularTVTitle[i] %></a></h5>
+                </div>
+              </div>
+            </div><% } %>
+         
+          </div>
+        </div>
+  
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-8">
+        <div class="product__sidebar">
+          <div class="product__sidebar__view">
+            <div class="section-title">
+              <h5>Top Rated Movies</h5>
+            </div>
+          
+            <div class="filter__gallery">
+              
+              <% for (let i =0; i <topRatedMovie.length; i++) {  %>
+       
+              <div
+                class="product__sidebar__view__item set-bg mix day years"
+                data-setbg="<%= topRatedMovieImage[i] %>"
+              > 
+                <div class="ep"><%= topRatedMovieVoteAverage[i] %></div>
+            
+                <h5><a href="/movie/details/<%= topRatedMovie[i] %>"><%= topRatedMovieTitle[i] %></a></h5>
+              </div>
+            <% } %>
+             
+          <div class="product__sidebar__comment">
+            <div class="section-title">
+              <h5>Top Rated TV Series</h5>
+             
+            </div>
+            <% for (let i =0; i <topRatedTV.length; i++) {  %>
+            <div class="product__sidebar__comment__item">
+              <div class="product__sidebar__comment__item__pic set-bg ">
+                <img src="<%= topRatedTVImage[i] %>" alt="" />
+              </div>
+              <div class="product__sidebar__comment__item__text">
+                <h5>
+                  <a href="/tv/details/<%= topRatedTV[i] %>"><%= topRatedTVTitle[i] %></a>
+                </h5>              
+                  
+                <p style="color :white;overflow:hidden; height: 170px;"><%= topRatedTVOverview[i] %></p>
+              </div>
+            </div><% } %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product Section End -->
+
+<%- include ("../partials/footer") %>
