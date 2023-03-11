@@ -43,10 +43,6 @@
 
 ## About The Project
 
-![Product Name Screen Shot][product-screenshot1]
-![Product Name Screen Shot][product-screenshot2]
-![Product Name Screen Shot][product-screenshot3]
-
 Movie Geeks is a website that provides you information about your favorite movie and TV series. You can see all about the film, trailer, photos, review, and other stuff you need to know about your favorite movie and film.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
