@@ -10,7 +10,7 @@
 <h3 align="center">Movie DB</h3>
 
   <p align="center">
-  Movie Geeks is a website that provides you information about your favorite movie and TV series. You can see all about the film, trailer, photos, review, and other stuff you need to know about your favorite movie and film.
+  Movie DB is a website that provides you information about your favorite movie and TV series. You can see all about the film, trailer, photos, review, and other stuff you need to know about your favorite movie and film.
     
   </p>
 </div>
@@ -43,7 +43,7 @@
 
 ## About The Project
 
-Movie Geeks is a website that provides you information about your favorite movie and TV series. You can see all about the film, trailer, photos, review, and other stuff you need to know about your favorite movie and film.
+Movie DB is a website that provides you information about your favorite movie and TV series. You can see all about the film, trailer, photos, review, and other stuff you need to know about your favorite movie and film.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
